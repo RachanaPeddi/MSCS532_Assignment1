@@ -1,13 +1,17 @@
 def insertion_sort_decreasing(values):
     """Sort the given list in monotonically decreasing order using insertion sort."""
+
+    # Start from the second element and insert each value into its proper position
     for i in range(1, len(values)):
         current_value = values[i]
         position = i - 1
 
+        # Shift smaller values one position to the right
         while position >= 0 and values[position] < current_value:
             values[position + 1] = values[position]
             position -= 1
 
+        # Place the current value in its correct position
         values[position + 1] = current_value
 
     return values
