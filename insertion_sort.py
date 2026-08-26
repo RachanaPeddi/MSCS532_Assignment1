@@ -1,4 +1,5 @@
 def insertion_sort_decreasing(values):
+    """Sort the given list in monotonically decreasing order using insertion sort."""
     for i in range(1, len(values)):
         current_value = values[i]
         position = i - 1
